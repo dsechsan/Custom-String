@@ -1,0 +1,134 @@
+{
+  "tests": [
+    {
+      "name": "Compile and Warnings Test",
+      "setup": "cmake -B Builds; make -C Builds > compile_output.txt 2>&1",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; if grep -i 'warning' compile_output.txt; then echo 'Compiler warnings found.'; exit 1; else echo 'No compiler warnings.'; exit 0; fi",
+      "input": "",
+      "output": "No compiler warnings.",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "Buffer Manager - OCF test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 BufferOCF",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "Buffer Manager - Expand Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Expand",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Buffer Manager - Compact Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Compact",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "String - OCF Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 OCF",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "String - Memory Test",
+      "setup": "sudo apt-get update > /dev/null; sudo apt-get install valgrind > /dev/null",
+      "run": "valgrind --tool=memcheck --leak-check=full --error-exitcode=1 ./Builds/Assignment_2 Speed",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "String - Insert Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Insert",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "String - Append Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Append",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "String - Replace Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Replace",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "String - Erase Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Erase",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 5
+    },
+    {
+      "name": "String - Search Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Search ",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "String - Compare Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Compare",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "String - Speed Test",
+      "setup": "",
+      "run": "printf '\\\\n\\\\nRunning test...\\\\n\\\\n'; ./Builds/Assignment_2 Speed",
+      "input": "",
+      "output": "PASS",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    }
+  ]
+}
