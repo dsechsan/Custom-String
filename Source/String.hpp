@@ -345,7 +345,7 @@ namespace ECE141 {
         return anOut;
     };
 //    template <typename T>;
-    std::istream& operator >> (std::istream &anIn, const String<char> &aStr){
+    std::istream& operator >> (std::istream &anIn){
         return anIn;
     };
         
