@@ -332,7 +332,7 @@ namespace ECE141 {
 
         friend std::ostream& operator << (std::ostream &anOut, const String<T> &aStr);
                 
-        friend std::istream& operator >> (std::istream &anIn);
+        friend std::istream& operator >> (std::istream &anIn, const String<T> &aStr);
         
        
         protected:
@@ -345,7 +345,7 @@ namespace ECE141 {
         return anOut;
     };
 //    template <typename T>;
-    std::istream& operator >> (std::istream &anIn){
+    std::istream& operator >> (std::istream &anIn, const String<char> &aStr){
         return anIn;
     };
         
