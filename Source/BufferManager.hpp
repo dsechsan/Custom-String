@@ -7,6 +7,7 @@
 #ifndef BufferManager_h
 #define BufferManager_h
 #include <iostream>
+#include <cstring>
 
 namespace ECE141   {
 
