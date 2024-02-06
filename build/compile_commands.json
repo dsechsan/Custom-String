@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/dsechs/Library/CloudStorage/OneDrive-UCSanDiego/Desktop/ECE 141A/PA2/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -Wall -Wextra -Wpedantic -std=gnu++17 -o CMakeFiles/Assignment_2.dir/Source/main.cpp.o -c \"/Users/dsechs/Library/CloudStorage/OneDrive-UCSanDiego/Desktop/ECE 141A/PA2/Source/main.cpp\"",
+  "file": "/Users/dsechs/Library/CloudStorage/OneDrive-UCSanDiego/Desktop/ECE 141A/PA2/Source/main.cpp"
+}
+]
