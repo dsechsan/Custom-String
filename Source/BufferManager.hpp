@@ -79,7 +79,7 @@ template <typename T, int aPreSize = 64>
             this->capacity = capacity;
             return *this;
         }
-        size_t willExpand(size_t aNewSize, size_t anOffset=0){
+        size_t willExpand(size_t aNewSize){
             while(capacity < aNewSize){
                 capacity*= 2;
             }
@@ -93,7 +93,7 @@ template <typename T, int aPreSize = 64>
             return capacity;
         }
         
-        size_t willCompact(size_t aNewSize, size_t anOffset=0){
+        size_t willCompact(size_t aNewSize){
             while (capacity > aNewSize){
                 capacity /= 2;
             }
