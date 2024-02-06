@@ -92,3 +92,12 @@ int main(int argc, const char * argv[]) {
     }
     return 0;
 }
+
+//int main(){
+//    std::stringstream theOutput;
+//    BufferManagerAutoTests bufferManagerTest;
+//    auto result = bufferManagerTest("OCFTest",theOutput);
+//    std::cout<< temp << " test " << kMsgs[result] << "\n" << theOutput.str() <<"\n";
+//    return !result;
+//    
+//}
