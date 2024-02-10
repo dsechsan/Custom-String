@@ -89,7 +89,7 @@ template <typename T, int aPreSize = 64>
                 std::memcpy(newBuffer.get(), buffer.get() , sizeof(T)*(length));
             }
             
-            buffer = std::swap(newBuffer,buffer);
+            std::swap(newBuffer,buffer);
             return capacity;
         }
         
@@ -102,7 +102,7 @@ template <typename T, int aPreSize = 64>
                 std::memcpy(newBuffer.get(), buffer.get(), sizeof(T)*(length));
             }
             
-            buffer = std::move(newBuffer);
+           std::swap(newBuffer,buffer);
             return capacity;
         }
         
