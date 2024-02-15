@@ -276,5 +276,597 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76938EAF-2205-405D-A50F-79C56644CB9E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "405"
+            endingLineNumber = "405"
+            landmarkName = "doReplaceTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71C6E8BC-DC9C-48DE-9CCB-20262C46F10C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
+            landmarkName = "doReplaceTests(anOutput)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "71C6E8BC-DC9C-48DE-9CCB-20262C46F10C - 7964603c25e0536c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "434"
+                  endingLineNumber = "434"
+                  offsetFromSymbolStart = "924">
+               </Location>
+               <Location
+                  uuid = "71C6E8BC-DC9C-48DE-9CCB-20262C46F10C - 7964603c25e053c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "856">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0548DFBF-7A3A-4664-B42C-A65BF12A973C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "doReplaceTests(anOutput)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0548DFBF-7A3A-4664-B42C-A65BF12A973C - 7964603c25e05226"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "440"
+                  endingLineNumber = "440"
+                  offsetFromSymbolStart = "1144">
+               </Location>
+               <Location
+                  uuid = "0548DFBF-7A3A-4664-B42C-A65BF12A973C - 7964603c25e05226"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "440"
+                  endingLineNumber = "440"
+                  offsetFromSymbolStart = "924">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B47CD162-4290-4CC6-A8A5-236DA056DCE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "446"
+            endingLineNumber = "446"
+            landmarkName = "doReplaceTests(anOutput)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B47CD162-4290-4CC6-A8A5-236DA056DCE8 - 7964603c25e052f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "446"
+                  endingLineNumber = "446"
+                  offsetFromSymbolStart = "1276">
+               </Location>
+               <Location
+                  uuid = "B47CD162-4290-4CC6-A8A5-236DA056DCE8 - 7964603c25e052f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "446"
+                  endingLineNumber = "446"
+                  offsetFromSymbolStart = "1144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB572601-FEE3-4506-BF09-5705CAB0F98D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "453"
+            endingLineNumber = "453"
+            landmarkName = "doReplaceTests(anOutput)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB572601-FEE3-4506-BF09-5705CAB0F98D - 7964603c25e055d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "453"
+                  endingLineNumber = "453"
+                  offsetFromSymbolStart = "1408">
+               </Location>
+               <Location
+                  uuid = "CB572601-FEE3-4506-BF09-5705CAB0F98D - 7964603c25e055d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "453"
+                  endingLineNumber = "453"
+                  offsetFromSymbolStart = "1276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E61A6B0C-210C-4991-920D-B0FAA11753AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "461"
+            endingLineNumber = "461"
+            landmarkName = "doReplaceTests(anOutput)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E61A6B0C-210C-4991-920D-B0FAA11753AD - 7964603c25e054eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "461"
+                  endingLineNumber = "461"
+                  offsetFromSymbolStart = "1600">
+               </Location>
+               <Location
+                  uuid = "E61A6B0C-210C-4991-920D-B0FAA11753AD - 7964603c25e054eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "461"
+                  endingLineNumber = "461"
+                  offsetFromSymbolStart = "1468">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3537E66-9C31-4638-9E31-E8D037032ECD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "469"
+            endingLineNumber = "469"
+            landmarkName = "doReplaceTests(anOutput)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B3537E66-9C31-4638-9E31-E8D037032ECD - 7964603c25e057e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "469"
+                  endingLineNumber = "469"
+                  offsetFromSymbolStart = "1792">
+               </Location>
+               <Location
+                  uuid = "B3537E66-9C31-4638-9E31-E8D037032ECD - 7964603c25e057e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "469"
+                  endingLineNumber = "469"
+                  offsetFromSymbolStart = "1660">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E5F1D86-6660-4237-8DCD-CEBEFF781FAD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "477"
+            endingLineNumber = "477"
+            landmarkName = "doReplaceTests(anOutput)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E5F1D86-6660-4237-8DCD-CEBEFF781FAD - 7964603c25e056fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "477"
+                  endingLineNumber = "477"
+                  offsetFromSymbolStart = "1984">
+               </Location>
+               <Location
+                  uuid = "7E5F1D86-6660-4237-8DCD-CEBEFF781FAD - 7964603c25e056fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StringAutoTests::doReplaceTests(std::__1::basic_ostream&lt;char, std::__1::char_traits&lt;char&gt;&gt;&amp;)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/autotest.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "477"
+                  endingLineNumber = "477"
+                  offsetFromSymbolStart = "1852">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "931D5611-BC42-41B6-B88E-6B8CD431DD3F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "doOCFTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95E15ED2-AD23-4EDA-9124-0E112987D8AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "648"
+            endingLineNumber = "648"
+            landmarkName = "doSpeedTest(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6998AC9E-D91E-43F8-9BAD-F6A32D82B1BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/String.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "String()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6998AC9E-D91E-43F8-9BAD-F6A32D82B1BD - 9b0412c1d544dc6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ECE141::String&lt;char, 32ul&gt;::String(char const*)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/String.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "6998AC9E-D91E-43F8-9BAD-F6A32D82B1BD - 9b0412c1d544dc6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ECE141::String&lt;char, 32ul&gt;::String(char const*)"
+                  moduleName = "Assignment_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dsechs/Desktop/ECE%20141A/PA2/Source/String.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CAAE7E7-CA1F-4C2A-9BBC-7C3969037AC7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/String.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "operator+=(aString)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "192ACA84-B138-4ABA-A10A-1BD8F3AD00B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "doOCFTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1357DD6-F1D6-499D-8706-EDDA20787FF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "doOCFTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9973334-B943-44D3-BB1F-3F601F5F9FB5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "doOCFTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB61529B-B21D-4B76-AF96-E26E3A4E2D38"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
+            landmarkName = "doEraseTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD902232-97EE-497C-B820-D88E8A2761AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
+            landmarkName = "doEraseTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C62BE7B0-F0BA-4B6D-A490-FC213F2F9DF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "356"
+            endingLineNumber = "356"
+            landmarkName = "doEraseTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F886234-5139-4D8A-972D-A26B29433EBB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "368"
+            endingLineNumber = "368"
+            landmarkName = "doEraseTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DBEC9A4-ED3D-4E35-8CDC-F0AC3B2E7C8A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
+            landmarkName = "doEraseTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C95253D-8013-4DF1-B01E-CBA9B6353FB5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Source/autotest.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
+            landmarkName = "doEraseTests(anOutput)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

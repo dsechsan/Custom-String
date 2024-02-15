@@ -77,7 +77,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "Replace"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "Erase"
@@ -97,7 +97,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "All"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "OCF"

@@ -7,23 +7,28 @@
 #ifndef BufferManager_h
 #define BufferManager_h
 #include <iostream>
+#include <cstring>
 
 namespace ECE141   {
 
-template <typename T, int aPreSize = 64>
+template <typename T, size_t aPreSize = 32>
     class BufferManager {
     public:
         //finish me - default constructor
         BufferManager() : length(0), capacity(aPreSize) {
             buffer = std::make_unique<T[]>(capacity + 1);
-            //std::cout << length << "\n";
+        }
+        //finish me - constructor with predefined size
+        BufferManager(size_t aSize) : length(0), capacity(aSize){
+            buffer = std::make_unique<T[]> (capacity + 1);
         }
         
         //finish me - copy constructor
         BufferManager(const ECE141::BufferManager<T> &aCopy) : length(aCopy.length) {
             if(this!= &aCopy){
                 capacity = aCopy.capacity;
-                buffer = std::make_unique<T[]>(capacity + 1);
+                buffer = std::make_unique<T[]> (capacity + 1);
+                length = aCopy.length;
                 if(aCopy.buffer != NULL){
                     std::memcpy(buffer.get(),aCopy.buffer.get(),length*sizeof(T));}
             }
@@ -31,33 +36,38 @@ template <typename T, int aPreSize = 64>
         
         BufferManager& operator=(const ECE141::BufferManager<T> &aCopy){
             if(this!= &aCopy){
-                capacity = willExpand(aCopy.capacity);
+                capacity = aCopy.capacity;
+                length = aCopy.length;
+                buffer = std::make_unique<T[]> (capacity + 1);
                 if(aCopy.buffer != NULL){
-                    std::memcpy(buffer.get(),aCopy.buffer.get(),length*sizeof(T));
+                    std::memcpy(buffer.get(),aCopy.buffer.get(),aCopy.length*sizeof(T));
                 }
             }
             return *this;
         }
         
-        //finish me - constructor with predefined size
-        BufferManager(size_t aSize) : length(0), capacity(aSize){
+        BufferManager& assign(const T* aCopy, size_t size){
+            capacity = aPreSize*((size / aPreSize) + 1)  ;
+           // std::cout << capacity << std::endl;
             buffer = std::make_unique<T[]> (capacity + 1);
-        }
-       
-        void allocateNewBuffer(size_t capacity){
-            buffer = std::make_unique<T[]>(capacity + 1);
-        }
-        //Destructor
-        ~BufferManager(){
-            //delete[] buffer;
+            length = size;
+            if(size != 0){
+                std::memcpy(buffer.get(),aCopy,length * sizeof(T));
+            }
+        
+            return *this;
         }
         
-        void clearBuffer(){
-            
-            buffer.reset();
-            allocateNewBuffer(capacity);
+        
+//        void allocateNewBuffer(size_t capacity){
+//            buffer = std::make_unique<T[]>(capacity + 1);
+//        }
+        //Destructor
+        ~BufferManager(){
+//            delete[] buffer;
         }
-
+        
+        
         //---- Add other ocf methods --
 
         //---- Basic methods you must implement. Add more if you need to...
@@ -70,39 +80,48 @@ template <typename T, int aPreSize = 64>
         size_t getLength() const{
             return length;
         }
+        
         BufferManager& setLength(size_t len) {
             length = len;
             return *this;
         }
+        
         BufferManager& setCapacity(size_t capacity){
             this->capacity = capacity;
             return *this;
         }
-        size_t willExpand(size_t aNewSize, size_t anOffset=0){
-            while(capacity < aNewSize){
-                capacity*= 2;
+        
+        BufferManager& willExpand(size_t aNewSize, size_t anOffset=0){
+            if(capacity > aNewSize){return *this;}
+            else{
+                while(capacity < aNewSize){
+                    capacity*= 2;
+                }
+        
+                std::unique_ptr<T[]> newBuffer = std::make_unique<T[]> (capacity + 1);
+                if( buffer != nullptr){
+                    std::memcpy(newBuffer.get(), buffer.get() , sizeof(T)*(length));
+                }
+                
+                buffer = std::move(newBuffer);
+                return *this;
             }
-            
-            std::unique_ptr<T[]> newBuffer = std::make_unique<T[]> (capacity + 1);
-            if(length !=0){
-                std::memcpy(newBuffer.get(), buffer.get() , sizeof(T)*(length));
-            }
-            
-            buffer = std::move(newBuffer);
-            return capacity;
         }
         
-        size_t willCompact(size_t aNewSize, size_t anOffset=0){
-            while (capacity > aNewSize){
-                capacity /= 2;
+        BufferManager& willCompact(size_t aNewSize, size_t anOffset=0){
+            if(capacity < 2*aNewSize){return *this;}
+            else{
+                while (capacity > 2*aNewSize){
+                    capacity /= 2;
+                }
+                std::unique_ptr<T[]> newBuffer = std::make_unique<T[]> (capacity + 1);
+                if(buffer != nullptr){
+                    std::memcpy(newBuffer.get(), buffer.get(), sizeof(T)*(length));
+                }
+                
+                buffer = std::move(newBuffer);
+                return *this;
             }
-            std::unique_ptr<T[]> newBuffer = std::make_unique<T[]> (capacity + 1);
-            if(length != 0){
-                std::memcpy(newBuffer.get(), buffer.get(), sizeof(T)*(length));
-            }
-            
-            buffer = std::move(newBuffer);
-            return capacity;
         }
         
        

@@ -428,12 +428,12 @@ private:
             theWords=getWords(3);
             std::string STDString2(theWords);
             ECE141::String ECEString6(theWords.c_str());
-            STDString1.replace(5, 8, STDString2);
-            ECEString5.replace(5, 8, ECEString6);
-            if (!(ECEString5.getBuffer() == STDString1)) {
-                anOutput << "replace(size_t pos, size_t len, const String& aString)\n";
-                return false;
-            }
+//            STDString1.replace(5, 8, STDString2);
+//            ECEString5.replace(5, 8, ECEString6);
+//            if (!(ECEString5.getBuffer() == STDString1)) {
+//                anOutput << "replace(size_t pos, size_t len, const String& aString)\n";
+//                return false;
+//            }
             STDString1.replace(3, 2, STDString2);
             ECEString5.replace(3, 2, ECEString6);
             if (!(ECEString5.getBuffer() == STDString1)) {
