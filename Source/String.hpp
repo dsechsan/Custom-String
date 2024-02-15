@@ -163,7 +163,7 @@ namespace ECE141 {
             else{
                 std::memmove(bufferManager.getBuffer() + anIndex,
                              bufferManager.getBuffer() + anIndex + aCount,
-                             (newLength - anIndex) * sizeof(T));
+                             (newLength - anIndex + 1) * sizeof(T));
                 return *this;
             }
             
