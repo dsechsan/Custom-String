@@ -11,7 +11,7 @@
 
 namespace ECE141   {
 
-template <typename T, size_t aPreSize = 32>
+template <typename T, size_t aPreSize = 12>
     class BufferManager {
     public:
         //finish me - default constructor

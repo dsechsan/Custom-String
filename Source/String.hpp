@@ -54,11 +54,12 @@ namespace ECE141 {
         }
 
         String& operator+=(const String &aString){
+            size_t currentLength = this->size();
             size_t newLength = this->size() + aString.size();
             if(newLength * sizeof(T) > bufferManager.getCapacity()){
                 bufferManager.willExpand(newLength);
             }
-            std::memcpy(this->getBuffer() + this->size(), aString.getBuffer(), aString.size());
+            std::memcpy(this->getBuffer() + currentLength, aString.getBuffer(), aString.size()*sizeof(T));
             bufferManager.setLength(newLength);
             return *this;
         }
@@ -162,7 +163,7 @@ namespace ECE141 {
             else{
                 std::memmove(bufferManager.getBuffer() + anIndex,
                              bufferManager.getBuffer() + anIndex + aCount,
-                             (newLength - anIndex + 1) * sizeof(T));
+                             (newLength - anIndex) * sizeof(T));
                 return *this;
             }
             
