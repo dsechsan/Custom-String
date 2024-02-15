@@ -41,6 +41,7 @@ template <typename T, size_t aPreSize = 12>
                 buffer = std::make_unique<T[]> (capacity + 1);
                 if(aCopy.buffer != NULL){
                     std::memcpy(buffer.get(),aCopy.buffer.get(),aCopy.length*sizeof(T));
+//                    std::copy(aCopy.buffer.get(), aCopy.buffer.get()+aCopy.length, buffer.get());
                 }
             }
             return *this;
@@ -59,12 +60,8 @@ template <typename T, size_t aPreSize = 12>
         }
         
         
-//        void allocateNewBuffer(size_t capacity){
-//            buffer = std::make_unique<T[]>(capacity + 1);
-//        }
         //Destructor
         ~BufferManager(){
-//            delete[] buffer;
         }
         
         

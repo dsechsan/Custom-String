@@ -37,15 +37,15 @@ namespace ECE141 {
         };
         
         // Assignment operator
-         String& operator=(const String &aCopy){
-             if(this != &aCopy){
-                 bufferManager = aCopy.bufferManager;
+         String& operator=(const String &aString){
+             if(this != &aString){
+                 bufferManager = aString.bufferManager;
              }
              return *this;
         }
         
-        String& operator=(const char* aCopy){
-            *this = String(aCopy);
+        String& operator=(const char* aCstring){
+            *this = String(aCstring);
             return *this;
         }
 
@@ -55,7 +55,7 @@ namespace ECE141 {
 
         String& operator+=(const String &aString){
             size_t currentLength = this->size();
-            size_t newLength = this->size() + aString.size();
+            size_t newLength = currentLength + aString.size();
             if(newLength * sizeof(T) > bufferManager.getCapacity()){
                 bufferManager.willExpand(newLength);
             }
