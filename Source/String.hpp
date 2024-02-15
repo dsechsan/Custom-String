@@ -125,7 +125,7 @@ namespace ECE141 {
 
 
         String& insert(size_t anIndex, const char* aCstring, size_t aStrIndex, size_t aStrCount) {
-            return(insert(anIndex, String(aCstring), aStrIndex,aStrCount))
+            return(insert(anIndex, String(aCstring), aStrIndex,aStrCount));
 
 //            size_t newLength = this->size() + aStrCount;
 //
