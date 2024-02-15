@@ -45,10 +45,6 @@ namespace ECE141 {
         }
         
         String& operator=(const char* aCopy){
-//            if(getBuffer() != aCopy){
-//                bufferManager.assign(aCopy,std::strlen(aCopy));
-//                bufferManager.getBuffer()[std::strlen(aCopy)] = '\0';
-//            }
             *this = String(aCopy);
             return *this;
         }
@@ -68,17 +64,9 @@ namespace ECE141 {
         }
 
         String& operator+=(const char* &aCstring){
-//            size_t newLength = this->size() + std::strlen(aCstring);
-//            if(newLength * sizeof(T) > bufferManager.getCapacity()){
-//                bufferManager.willExpand(newLength);
-//            }
-//            std::memcpy(this->getBuffer()+this->size(), aCstring, std::strlen(aCstring));
-//            bufferManager.setLength(newLength);
-//            bufferManager.getBuffer()[newLength] = '\0';
             *this += String(aCstring);
             return *this;
         }
-
 
         String  operator+(const String &aString) const{
             String result(*this);
@@ -125,43 +113,11 @@ namespace ECE141 {
 
 
         String& insert(size_t anIndex, const char* aCstring, size_t aStrIndex, size_t aStrCount) {
-            return(insert(anIndex, String(aCstring), aStrIndex,aStrCount));
-
-//            size_t newLength = this->size() + aStrCount;
-//
-//            if(newLength * sizeof(T) > bufferManager.getCapacity()){
-//                bufferManager.willExpand(newLength);
-//            }
-//
-//            // Shift existing characters to make space for the new ones
-//            std::memmove(this->getBuffer() + anIndex + aStrCount,
-//                         this->getBuffer() + anIndex,
-//                         (this->size() - anIndex + 1) * sizeof(T));
-//
-//            // Copy the characters from aStr to the specified position
-//            std::memcpy(this->getBuffer() + anIndex,
-//                        aCstring + aStrIndex,
-//                        aStrCount * sizeof(T));
-//
-//            bufferManager.setLength(newLength);
-//            return *this;
+            return insert(anIndex, String(aCstring), aStrIndex,aStrCount);
         }
 
         String& insert(size_t anIndex, T aChar) {
-
-            size_t newLength = this->size() + 1;
-            if(newLength * sizeof(T) > bufferManager.getCapacity()){
-                bufferManager.willExpand(newLength * sizeof(T));
-            }
-
-            std::memmove(this->getBuffer() + anIndex + 1,
-                         this->getBuffer() + anIndex,
-                         (this->size() - anIndex + 1) * sizeof(T));
-
-            // Insert the new character
-            this->getBuffer()[anIndex] = aChar;
-            bufferManager.setLength(newLength);
-            return *this;
+            return insert(anIndex,String(&aChar),0,1);
         }
 
         String& replace(size_t anIndex, size_t aMaxCopyLen, const String &aString) {
@@ -190,44 +146,15 @@ namespace ECE141 {
 
 
         String& replace(size_t anIndex, size_t aMaxCopyLen, const char* aCstring) {
-//            if (anIndex > this->size()) {
-//                throw std::out_of_range("Index out of range");
-//            }
-//
-////            size_t actualCopyLen = std::min(aMaxCopyLen,this->size() - anIndex);
-//            size_t actualCopyLen = std::strlen(aCstring);
-//            size_t newLength = this->size() - aMaxCopyLen + actualCopyLen;
-//
-//            if(newLength * sizeof(T) > bufferManager.getCapacity()){
-//                bufferManager.willExpand(newLength * sizeof(T));
-//            }
-//            // Copy the characters from aString to the specified position
-//
-//            // Shift existing characters after the replaced portion
-//            if(anIndex + aMaxCopyLen <= this->size()){
-//                std::memmove(bufferManager.getBuffer() + anIndex + std::strlen(aCstring),
-//                             bufferManager.getBuffer() + anIndex + aMaxCopyLen,
-//                             (bufferManager.getLength() - anIndex - aMaxCopyLen ) * sizeof(T));
-//                
-//                std::memcpy(bufferManager.getBuffer() + anIndex, aCstring, actualCopyLen * sizeof(T));
-//                bufferManager.setLength(newLength);
-//            }
-//            this->getBuffer()[newLength] = '\0';
-//            return *this;
             return replace(anIndex,aMaxCopyLen, String(aCstring));
         }
 
         String& erase(size_t anIndex, size_t aCount) {
-//            if (anIndex >= bufferManager.getLength()) {
-//                throw std::out_of_range("Index out of range");
-//            }
-//            
             size_t eraseLength = std::min(aCount, bufferManager.getLength() - anIndex);
             size_t newLength = bufferManager.getLength() - eraseLength ;
             bufferManager.willCompact(newLength);
             bufferManager.setLength(newLength);
 
-            // Shift existing characters after the erased portion
             if(eraseLength < aCount){
                 bufferManager.getBuffer()[newLength] = '\0';
                 return *this;
@@ -236,9 +163,9 @@ namespace ECE141 {
                 std::memmove(bufferManager.getBuffer() + anIndex,
                              bufferManager.getBuffer() + anIndex + aCount,
                              (bufferManager.getLength() - anIndex + 1) * sizeof(T));
+                return *this;
             }
-
-            return *this;
+            
         }
         
         int find(const String& aString, size_t anIndex = 0) const {
@@ -280,7 +207,6 @@ namespace ECE141 {
         bool operator>=(const String &aString) const {
             return !(*this < aString);
         }
-        //Add version(s) to support const char*...
         
         bool operator==(const char* aCstring) const {
             return compare(aCstring) == 0;
@@ -306,7 +232,6 @@ namespace ECE141 {
        
         protected:
             BufferManager<T> bufferManager;
-            //length = bufferManager.length;
     };
 
 //    template <typename T>;
