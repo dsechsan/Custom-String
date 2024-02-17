@@ -11,7 +11,7 @@
 
 namespace ECE141   {
 
-template <typename T, size_t aPreSize = 32>
+template <typename T, size_t aPreSize = 12>
     class BufferManager {
     public:
         //finish me - default constructor
@@ -31,6 +31,7 @@ template <typename T, size_t aPreSize = 32>
             if(length != 0){
                 std::memcpy(buffer.get(),aCstring,(length+1) * sizeof(T));
             }
+            buffer[length] = '\0';
         }
         
         //finish me - copy constructor

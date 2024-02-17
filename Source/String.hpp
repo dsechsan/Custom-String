@@ -58,7 +58,7 @@ namespace ECE141 {
             if(newLength * sizeof(T) > bufferManager.getCapacity()){
                 bufferManager.willExpand(newLength);
             }
-            std::memcpy(this->getBuffer() + currentLength, aCstring, std::strlen(aCstring)*sizeof(T));
+            std::memcpy(this->getBuffer() + currentLength, aCstring, (std::strlen(aCstring)+1)*sizeof(T));
             bufferManager.setLength(newLength);
             return *this;
         }
@@ -109,6 +109,7 @@ namespace ECE141 {
                         aStrCount * sizeof(T));
 
             bufferManager.setLength(newLength);
+//            this->getBuffer()[newLength] = '\0';
             return *this;
         }
 
@@ -160,6 +161,7 @@ namespace ECE141 {
                 std::memmove(bufferManager.getBuffer() + anIndex,
                              bufferManager.getBuffer() + anIndex + eraseLength,
                              (newLength - anIndex + 1) * sizeof(T));
+                this->getBuffer()[newLength] = '\0';
                 return *this;
             }
             
