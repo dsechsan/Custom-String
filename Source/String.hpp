@@ -156,14 +156,18 @@ namespace ECE141 {
             bufferManager.setLength(newLength);
 
             if(eraseLength < aCount){
-                bufferManager.getBuffer()[newLength] = '\0';
+//                bufferManager.getBuffer()[newLength] = '\0';
+                std::memset(bufferManager.getBuffer() + newLength, '\0', aCount - eraseLength);
+                std::cout << "the issue's here \n";
                 return *this;
             }
             else{
                 std::memmove(bufferManager.getBuffer() + anIndex,
                              bufferManager.getBuffer() + anIndex + eraseLength,
-                             (newLength - anIndex + 1) * sizeof(T));
-//                bufferManager.getBuffer()[newLength] = '\0';
+                             (newLength - anIndex+1) * sizeof(T));
+                bufferManager.getBuffer()[newLength] = '\0';
+                std::cout << "the issue's here \n";
+
                 return *this;
             }
             

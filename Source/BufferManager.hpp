@@ -106,7 +106,7 @@ template <typename T, size_t aPreSize = 12>
                 if(buffer != nullptr){
                     std::memcpy(newBuffer.get(), buffer.get(), sizeof(T)*(length));
                 }
-                
+
                 buffer = std::move(newBuffer);
                 return *this;
             }

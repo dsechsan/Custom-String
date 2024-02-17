@@ -343,7 +343,7 @@ private:
             theECEString1.erase(3, 5);
             auto theBuffer=theECEString1.getBuffer();
             if (std::strcmp(theBuffer,theSTDString1.c_str())) {
-                anOutput << "erase(size_t aPos, size_t aLength) failed\n";
+                anOutput << "erase(size_t aPos, size_t aLength) 2 failed\n";
                 return false;
             }
 
@@ -355,7 +355,7 @@ private:
             theECEString2.erase(0, 1);
             auto theBuffer2 = theECEString2.getBuffer();
             if (std::strcmp(theBuffer2, theSTDString2.c_str())) {
-                anOutput << "erase(size_t aPos, size_t aLength) failed\n";
+                anOutput << "erase(size_t aPos, size_t aLength) 3 failed\n";
                 return false;
             }
 
@@ -367,7 +367,7 @@ private:
             theECEString3.erase(theECEString3.size()-2, theECEString3.size()-1);
             auto theBuffer3 = theECEString3.getBuffer();
             if (std::strcmp(theBuffer3, theSTDString3.c_str())) {
-                anOutput << "erase(size_t aPos, size_t aLength) failed\n";
+                anOutput << "erase(size_t aPos, size_t aLength) 4 failed\n";
                 return false;
             }
 
