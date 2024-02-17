@@ -17,7 +17,7 @@
 
 namespace ECE141 {
 
-    template<typename T=char, size_t aPresize=32>
+    template<typename T=char>
     class String {
     public:
 
@@ -241,7 +241,7 @@ namespace ECE141 {
     };
 //    template <typename T>;
     std::istream& operator >> (std::istream &anIn, const String<char> &aStr){
-
+        return anIn;
     };
         
 

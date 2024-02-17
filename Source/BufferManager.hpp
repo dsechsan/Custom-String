@@ -31,7 +31,7 @@ template <typename T, size_t aPreSize = 12>
             if(length != 0){
                 std::memcpy(buffer.get(),aCstring,length * sizeof(T));
             }
-            buffer[length] = '\0';
+            buffer.get()[length] = '\0';
         }
         
         //finish me - copy constructor
