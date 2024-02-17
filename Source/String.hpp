@@ -26,7 +26,7 @@ namespace ECE141 {
             bufferManager = BufferManager<T>();
         };
 
-        String(const char* aBuffer) : bufferManager(aBuffer) {};
+        String(const char* aBuffer) : bufferManager(aBuffer) {bufferManager.getBuffer()[std::strlen(aBuffer)] = '\0';};
         
         //default copy ctor
         String(const String &aString) : bufferManager(aString.bufferManager) {};
@@ -94,33 +94,34 @@ namespace ECE141 {
         }
 
         String& insert(size_t anIndex, const String &aStr, size_t aStrIndex, size_t aStrCount) {
+            const char* bufferAsChar = aStr.getBuffer();
+            return insert(anIndex, bufferAsChar, aStrIndex,aStrCount);
+        }
 
-            size_t newLength = this->size() + aStrCount;
+
+        String& insert(size_t anIndex, const char* aCstring, size_t aStrIndex, size_t aStrCount) {
+            size_t insertLength = std::min(std::strlen(aCstring) - aStrIndex, aStrCount);
+            size_t newLength = this->size() + insertLength;
 
             if(newLength * sizeof(T) > bufferManager.getCapacity()){
                 bufferManager.willExpand(newLength);
             }
 
-            std::memmove(this->getBuffer() + anIndex + aStrCount,
+            std::memmove(this->getBuffer() + anIndex + insertLength,
                          this->getBuffer() + anIndex,
                          (this->size() - anIndex + 1) * sizeof(T));
 
             std::memcpy(this->getBuffer() + anIndex,
-                        aStr.getBuffer() + aStrIndex,
-                        aStrCount * sizeof(T));
+                        aCstring + aStrIndex,
+                        insertLength * sizeof(T));
 
             bufferManager.setLength(newLength);
 //            this->getBuffer()[newLength] = '\0';
             return *this;
         }
 
-
-        String& insert(size_t anIndex, const char* aCstring, size_t aStrIndex, size_t aStrCount) {
-            return insert(anIndex, String(aCstring), aStrIndex,aStrCount);
-        }
-
         String& insert(size_t anIndex, T aChar) {
-            return insert(anIndex,String(&aChar),0,1);
+            return insert(anIndex,&aChar,0,1);
         }
 
         String& replace(size_t anIndex, size_t aMaxCopyLen, const String &aString) {

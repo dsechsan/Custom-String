@@ -28,10 +28,10 @@ template <typename T, size_t aPreSize = 12>
             capacity = aPreSize*((length / aPreSize) + 1)  ;
             buffer = std::make_unique<T[]> (capacity + 1);
 
-            if(length != 0){
+            if(aCstring != nullptr){
                 std::memcpy(buffer.get(),aCstring,length * sizeof(T));
+//                buffer.get()[length] = '\0';
             }
-            buffer.get()[length] = '\0';
         }
         
         //finish me - copy constructor
