@@ -29,7 +29,7 @@ template <typename T, size_t aPreSize = 12>
             buffer = std::make_unique<T[]> (capacity + 1);
 
             if(length != 0){
-                std::memcpy(buffer.get(),aCstring,length * sizeof(T));
+                std::memcpy(buffer.get(),aCstring,(length+1) * sizeof(T));
             }
         }
         
@@ -44,7 +44,7 @@ template <typename T, size_t aPreSize = 12>
                 length = aCopy.length;
                 buffer = std::make_unique<T[]> (capacity + 1);
                 if(aCopy.buffer != nullptr){
-                    std::memcpy(buffer.get(),aCopy.buffer.get(),aCopy.length*sizeof(T));
+                    std::memcpy(buffer.get(),aCopy.buffer.get(),(aCopy.length+1)*sizeof(T));
                 }
             }
             return *this;
