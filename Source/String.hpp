@@ -36,9 +36,9 @@ namespace ECE141 {
         
         // Assignment operator
          String& operator=(const String &aString) {
-             if(this != aString){
+//             if(this != aString){
                 bufferManager = aString.bufferManager;
-            }
+//            }
              return *this;
         }
         
