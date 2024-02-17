@@ -60,6 +60,7 @@ namespace ECE141 {
             }
             std::memcpy(this->getBuffer() + currentLength, aCstring, std::strlen(aCstring)*sizeof(T));
             bufferManager.setLength(newLength);
+            bufferManager.getBuffer()[newLength] = '\0';
             return *this;
         }
 
@@ -161,7 +162,7 @@ namespace ECE141 {
                 std::memmove(bufferManager.getBuffer() + anIndex,
                              bufferManager.getBuffer() + anIndex + eraseLength,
                              (newLength - anIndex + 1) * sizeof(T));
-                bufferManager.getBuffer()[newLength] = '\0';
+//                bufferManager.getBuffer()[newLength] = '\0';
                 return *this;
             }
             
