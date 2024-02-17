@@ -137,7 +137,7 @@ namespace ECE141 {
                 
                 std::memcpy(this->getBuffer() + anIndex, aString.getBuffer(), actualCopyLen*sizeof(T));
                 bufferManager.setLength(newLength);}
-            this->getBuffer()[newLength] = '\0';
+//            this->getBuffer()[newLength] = '\0';
             return *this;
 
         }
@@ -161,7 +161,7 @@ namespace ECE141 {
                 std::memmove(bufferManager.getBuffer() + anIndex,
                              bufferManager.getBuffer() + anIndex + eraseLength,
                              (newLength - anIndex + 1) * sizeof(T));
-//                this->getBuffer()[newLength] = '\0';
+                bufferManager.getBuffer()[newLength] = '\0';
                 return *this;
             }
             
