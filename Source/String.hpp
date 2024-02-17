@@ -36,7 +36,9 @@ namespace ECE141 {
         
         // Assignment operator
          String& operator=(const String &aString) {
-            bufferManager = aString.bufferManager;
+             if(this != aString){
+                bufferManager = aString.bufferManager;
+            }
              return *this;
         }
         
@@ -236,6 +238,7 @@ namespace ECE141 {
     };
 //    template <typename T>;
     std::istream& operator >> (std::istream &anIn, const String<char> &aStr){
+        anIn >> aStr.getBuffer();
         return anIn;
     };
         
