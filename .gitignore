@@ -1,6 +1,9 @@
 **/Builds
+**/build:
 **/.DS_Store
 cmake-build-*
 out
 .idea
 .vs
+build/
+CMakeFiles/

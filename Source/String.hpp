@@ -12,7 +12,7 @@
 #include <iostream>
 #include "BufferManager.hpp"
 
-//It's up to you to decide the how the string and buffermanager
+//It's up to you to decide how the string and buffermanager
 //will work together -- IS_A vs HAS-A.
 
 namespace ECE141 {
@@ -22,25 +22,21 @@ namespace ECE141 {
     public:
 
         //add rest of the OCF methods...
-        String(const char* aBuffer=nullptr){
-            if(aBuffer){
-                bufferManager.assign(aBuffer, std::strlen(aBuffer));
-                bufferManager.getBuffer()[std::strlen(aBuffer)] = '\0';
-            }
+        String(){
+            bufferManager = BufferManager<T>();
         };
+
+        String(const char* aBuffer) : bufferManager(aBuffer) {};
         
-        //default ctor
-        String(const String &aString){
-            if(aString.size() != 0){
-                bufferManager =  aString.bufferManager;
-            }
-        };
+        //default copy ctor
+        String(const String &aString) : bufferManager(aString.bufferManager) {};
+
+        //destructor
+        ~String()= default;
         
         // Assignment operator
-         String& operator=(const String &aString){
-             if(this != &aString){
-                 bufferManager = aString.bufferManager;
-             }
+         String& operator=(const String &aString) {
+            bufferManager = aString.bufferManager;
              return *this;
         }
         
@@ -53,19 +49,21 @@ namespace ECE141 {
             return bufferManager.getBuffer()[pos];
         }
 
-        String& operator+=(const String &aString){
+
+        String& operator+=(const char* aCstring){
             size_t currentLength = this->size();
-            size_t newLength = currentLength + aString.size();
+            size_t newLength = currentLength + std::strlen(aCstring);
             if(newLength * sizeof(T) > bufferManager.getCapacity()){
                 bufferManager.willExpand(newLength);
             }
-            std::memcpy(this->getBuffer() + currentLength, aString.getBuffer(), aString.size()*sizeof(T));
+            std::memcpy(this->getBuffer() + currentLength, aCstring, std::strlen(aCstring)*sizeof(T));
             bufferManager.setLength(newLength);
             return *this;
         }
 
-        String& operator+=(const char* &aCstring){
-            *this += String(aCstring);
+        String& operator+=(const String &aString){
+            const char* bufferAsChar = aString.getBuffer();
+            *this += bufferAsChar;
             return *this;
         }
 
@@ -81,14 +79,14 @@ namespace ECE141 {
             return result;
         }
 
-        size_t size() const{
+        [[nodiscard]] size_t size() const{
             return bufferManager.getLength();
         }
 
         T* getBuffer() const{
             return bufferManager.getBuffer();
         }
-        size_t getCapacity() const{
+        [[nodiscard]] size_t getCapacity() const{
             return bufferManager.getCapacity();
         }
 
@@ -122,10 +120,6 @@ namespace ECE141 {
         }
 
         String& replace(size_t anIndex, size_t aMaxCopyLen, const String &aString) {
-            if (anIndex > this->size()) {
-                throw std::out_of_range("Index out of range");
-            }
-
             size_t actualCopyLen = aString.size();
             size_t newLength = this->size() - aMaxCopyLen + aString.size();
 
@@ -226,9 +220,9 @@ namespace ECE141 {
             return !(*this < aCstring);
         }
 
-        friend std::ostream& operator << (std::ostream &anOut, const String<T> &aStr);
+        friend std::ostream& operator << (std::ostream &anOut, const String<char> &aStr);
                 
-        friend std::istream& operator >> (std::istream &anIn, const String<T> &aStr);
+        friend std::istream& operator >> (std::istream &anIn, const String<char> &aStr);
         
        
         protected:

@@ -1,3 +1,0 @@
-/Users/dsechs/Library/CloudStorage/OneDrive-UCSanDiego/Desktop/ECE 141A/PA2/build/CMakeFiles/Assignment_2.dir
-/Users/dsechs/Library/CloudStorage/OneDrive-UCSanDiego/Desktop/ECE 141A/PA2/build/CMakeFiles/edit_cache.dir
-/Users/dsechs/Library/CloudStorage/OneDrive-UCSanDiego/Desktop/ECE 141A/PA2/build/CMakeFiles/rebuild_cache.dir
