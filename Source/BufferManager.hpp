@@ -40,7 +40,7 @@ template <typename T, size_t aPreSize = 12>
         
         BufferManager& operator=(const ECE141::BufferManager<T> &aCopy){
             if(this!= &aCopy){
-                capacity = aCojpy.capacity;
+                capacity = aCopy.capacity;
                 length = aCopy.length;
                 buffer = std::make_unique<T[]> (capacity + 1);
                 if(aCopy.buffer != nullptr){
