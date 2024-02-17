@@ -26,7 +26,7 @@ namespace ECE141 {
             bufferManager = BufferManager<T>();
         };
 
-        String(const char* aBuffer) : bufferManager(aBuffer) {bufferManager.getBuffer()[std::strlen(aBuffer)] = '\0';};
+        String(const char* aBuffer) : bufferManager(aBuffer) {};
         
         //default copy ctor
         String(const String &aString) : bufferManager(aString.bufferManager) {};
