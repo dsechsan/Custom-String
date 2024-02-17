@@ -154,11 +154,11 @@ namespace ECE141 {
             size_t newLength = bufferManager.getLength() - eraseLength ;
             bufferManager.willCompact(newLength);
             bufferManager.setLength(newLength);
-
+            std::ostream& anOutput;
             if(eraseLength < aCount){
 //                bufferManager.getBuffer()[newLength] = '\0';
                 std::memset(bufferManager.getBuffer() + newLength, '\0', aCount - eraseLength);
-                std::cout << "the issue's here \n";
+                anOutput << "the issue's here \n";
                 return *this;
             }
             else{
@@ -166,7 +166,7 @@ namespace ECE141 {
                              bufferManager.getBuffer() + anIndex + eraseLength,
                              (newLength - anIndex+1) * sizeof(T));
                 bufferManager.getBuffer()[newLength] = '\0';
-                std::cout << "the issue's here \n";
+                anOutput << "the issue's here \n";
 
                 return *this;
             }
