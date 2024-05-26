@@ -165,7 +165,7 @@ namespace ECE141 {
                 std::memmove(bufferManager.getBuffer() + anIndex,
                              bufferManager.getBuffer() + anIndex + eraseLength,
                              (newLength - anIndex+1) * sizeof(T));
-                bufferManager.getBuffer()[newLength] = '\0';
+//                bufferManager.getBuffer()[newLength] = '\0';
                 anOutput << "the issue's here - 2 \n";
 
                 return *this;
